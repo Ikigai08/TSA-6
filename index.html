@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assets/css/style.css">
+    <title>TSA 6</title>
+</head>
+<body>
+    <div class="content">
+        <div class="container">
+            <div class="nav">
+                <button class="btn btn1" id="btns1" onclick="showLogin()">Login</button>
+                <button class="btn btn2" id="btns2" onclick="showSignup()">Sign Up</button>
+            </div>
+            <div class="main">
+                <div id="login" class="loginClass">
+                    <input type="text" id="username" placeholder="Username" required><br>
+                    <input type="password" id="password" placeholder="Password"><br>
+                    <div class="enquire">
+                        <a href="#"><input type="checkbox" id="remember">Remember me</a>
+                        <a href="#">Forgot password?</a>
+                    </div><br>
+                    <button class="subBtn" type="submit" onclick="validateLogin()">LOGIN</button><br>
+                    <a href="#" onclick="showSignup()">No Account? Create one</a>
+                </div>
+                <div id="signUp" class="signupClass">
+                    <form id="signUpForm">
+                      <input type="text" id="firstName" placeholder="First Name" required><br>
+                      <div id="firstNameWarning" class="warning hidden">Please enter your first name.</div>
+                  
+                      <input type="text" id="lastName" placeholder="Last Name" required><br>
+                      <div id="lastNameWarning" class="warning hidden">Please enter your last name.</div>
+                  
+                      <input type="email" id="email" placeholder="Email" required><br>
+                      <div id="emailWarning" class="warning hidden">Please enter a valid email.</div>
+                  
+                      <input type="password" id="new-password" placeholder="Password" required><br>
+                      <div id="passwordWarning" class="warning hidden">Please enter a password.</div>
+                  
+                      <input type="password" id="confirm-password" placeholder="Confirm Password" required><br>
+                      <div id="confirmPasswordWarning" class="warning hidden">Please confirm your password.</div>
+                  
+                      <button class="signBtn" type="submit">CREATE ACCOUNT</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./Assets/js/script.js"></script>
+</body>
+</html>

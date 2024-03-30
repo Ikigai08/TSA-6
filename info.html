@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info</title>
+</head>
+<style>
+  body, html {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #a04444; 
+  }
+
+  #userInfo {
+      border: 2px solid #9b2f2f;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #a17474;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+</style>
+<body>
+    <div class="content">
+        <div class="container">
+            <div class="main">
+              <h1>Welcome, <span id="firstName"></span> <span id="lastName"></span>!</h1>
+              <p>Your email is: <span id="email"></span></p>
+              <p>Your password is: <span id="password"></span></p>
+            </div>
+        </div>
+    </div>
+    <script>
+      function getQueryParameters() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const parameters = {};
+        for (const param of urlParams) {
+          parameters[param[0]] = param[1];
+        }
+        return parameters;
+      }
+      
+      console.log(getQueryParameters());
+
+      const queryParameters = getQueryParameters();
+      document.getElementById("firstName").innerText = queryParameters.firstName;
+      document.getElementById("lastName").innerText = queryParameters.lastName;
+      document.getElementById("email").innerText = queryParameters.email;
+      document.getElementById("password").innerText = queryParameters.password;
+    </script>
+</body>
+</html>
